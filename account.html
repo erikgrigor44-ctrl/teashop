@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный Кабинет | Посуда и Чай</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo-link">
+                <h1 class="logo">
+                    <img src="img/coffee.svg" alt="Логотип" class="logo-icon">
+                    Посуда & Чай
+                </h1>
+            </a>
+            
+            <div class="search-bar">
+                <input type="text" id="search-input-main" placeholder="Поиск по товарам...">
+                <button id="search-btn-main">
+                    <img src="img/search.svg" alt="Поиск">
+                </button>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="contact.html">Контакты</a>
+                <a href="account.html">Кабинет</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="icon-btn" title="Личный кабинет">
+                    <img src="img/user.svg" alt="Личный кабинет">
+                </a>
+                <button id="cart-btn" class="icon-btn cart-btn" title="Корзина">
+                    <img src="img/shopping-cart.svg" alt="Корзина">
+                    <span id="cart-count">0</span>
+                </button>
+                <button id="menu-toggle" class="icon-btn menu-toggle" title="Меню">
+                    <img src="img/menu.svg" alt="Меню">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav id="mobile-menu" class="mobile-nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contact.html">Контакты</a>
+        <a href="account.html">Кабинет</a>
+    </nav>
+
+    <main>
+        <div class="container section">
+            <h2 class="section-title">Личный Кабинет</h2>
+            
+            <div class="account-layout">
+                
+                <aside class="account-sidebar" style="position: sticky; top: 100px;">
+                    <h3>Мой Кабинет</h3>
+                    <ul>
+                        <li><a href="#profile" class="active">Мои данные</a></li>
+                        <li><a href="#orders">История заказов</a></li> 
+                    </ul>
+                </aside>
+                
+                <div class="account-content">
+                    
+                    <h3 id="profile">Мои данные</h3>
+                    
+                    <div class="profile-info">
+                        <div class="profile-info-item">
+                            <span>Имя:</span>
+                            <strong>Иван Иванов</strong>
+                        </div>
+                        <div class="profile-info-item">
+                            <span>Email:</span>
+                            <strong>ivan.ivanov@mail.ru</strong>
+                        </div>
+                        <div class="profile-info-item">
+                            <span>Телефон:</span>
+                            <strong>+7 (999) 123-45-67</strong>
+                        </div>
+                        <div class="profile-info-item">
+                            <span>Адрес:</span>
+                            <strong>г. Москва, ул. Примерная, д. 15, кв. 10</strong>
+                        </div>
+                        <button class="secondary-btn" style="margin-top: 20px; max-width: 300px;">Редактировать данные</button>
+                    </div>
+
+                    <form class="account-form" id="password-form">
+                        <label for="current-password">Текущий пароль</label>
+                        <input type="password" id="current-password" placeholder="Введите текущий пароль" required>
+                        
+                        <label for="new-password">Новый пароль</label>
+                        <input type="password" id="new-password" placeholder="Придумайте новый пароль" required>
+
+                        <label for="confirm-password">Повторите новый пароль</label>
+                        <input type="password" id="confirm-password" placeholder="Повторите новый пароль" required>
+
+                        <button type="submit" class="secondary-btn" style="max-width: 300px; margin-top: 20px;">Изменить пароль</button>
+                    </form>
+
+                    <h3 id="orders" style="margin-top: 40px;">История заказов</h3>
+                    
+                    <table class="order-table">
+                        <thead>
+                            <tr>
+                                <th>Номер заказа</th>
+                                <th>Дата</th>
+                                <th>Статус</th>
+                                <th>Сумма</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#2025-001</td>
+                                <td>15.10.2025</td>
+                                <td><span class="order-status delivered">Доставлен</span></td>
+                                <td>3 150 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>#2025-002</td>
+                                <td>18.10.2025</td>
+                                <td><span class="order-status processing">В обработке</span></td>
+                                <td>1 800 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>#2024-098</td>
+                                <td>25.09.2024</td>
+                                <td><span class="order-status cancelled">Отменен</span></td>
+                                <td>550 ₽</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <div id="cart-modal" class="modal">
+        </div>
+
+    <footer>
+        <div class="container footer-grid">
+             <div class="footer-column footer-logo-info">
+                <h3 class="logo">
+                    <img src="img/coffee.svg" alt="" class="logo-icon-footer">
+                    Посуда & Чай
+                </h3>
+                <p class="copyright-text">&copy; 2025 Все права защищены.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                     <li><a href="account.html">Личный кабинет</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Помощь</h4>
+                <ul>
+                    <li><a href="payment_delivery.html">Оплата и Доставка</a></li> 
+                    <li><a href="agreement.html">Пользовательское соглашение</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-social">
+                <h4>Свяжитесь с нами</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" title="VK">
+                        <img src="img/vk.svg" alt="VK">
+                    </a> 
+                    <a href="#" class="social-icon" title="Telegram">
+                        <img src="img/telegram.svg" alt="Telegram">
+                    </a>
+                    <a href="#" class="social-icon" title="Instagram">
+                        <img src="img/instagram.svg" alt="Instagram">
+                    </a>
+                </div>
+                <p>+7 (495) 123-45-67</p>
+                <p>info@teashop.ru</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата и Доставка | Посуда и Чай</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo-link">
+                <h1 class="logo">
+                    <img src="img/coffee.svg" alt="Логотип" class="logo-icon">
+                    Посуда & Чай
+                </h1>
+            </a>
+            
+            <nav class="main-nav">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="contact.html">Контакты</a>
+                <a href="account.html">Кабинет</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="icon-btn" title="Личный кабинет"><img src="img/user.svg" alt="Личный кабинет"></a>
+                <button id="cart-btn" class="icon-btn cart-btn" title="Корзина">
+                    <img src="img/shopping-cart.svg" alt="Корзина">
+                    <span id="cart-count">0</span>
+                </button>
+                <button id="menu-toggle" class="icon-btn menu-toggle" title="Меню">
+                    <img src="img/menu.svg" alt="Меню">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav id="mobile-menu" class="mobile-nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contact.html">Контакты</a>
+        <a href="account.html">Кабинет</a>
+    </nav>
+
+    <main>
+        <div class="container section">
+            <h2 class="section-title">Информация об оплате и доставке</h2>
+            
+            <div class="info-columns-2">
+                
+                <section class="info-block">
+                    <h3><img src="https://icongr.am/feather/truck.svg?size=24&color=5D4037" alt="Доставка"> Доставка</h3>
+                    
+                    <h4>Курьерская доставка (Москва и МО)</h4>
+                    <p>Осуществляется собственной курьерской службой. Возможно выбрать удобный 3-часовой интервал.</p>
+                    <ul class="check-list">
+                        <li><span>Срок:</span> 1-2 рабочих дня.</li>
+                        <li><span>Стоимость:</span> <strong>350 ₽</strong>.</li>
+                        <li><span>Бесплатно:</span> При заказе от <strong>5000 ₽</strong>.</li>
+                    </ul>
+                    
+                    <h4>Доставка по России</h4>
+                    <p>Отправляем заказы по всей стране через партнерские транспортные компании (СДЭК, ПЭК, Почта России).</p>
+                    <ul class="check-list">
+                        <li><span>Срок:</span> От 3 до 10 рабочих дней (зависит от региона).</li>
+                        <li><span>Расчет:</span> Точная стоимость рассчитывается при оформлении заказа.</li>
+                        <li><span>Отслеживание:</span> Предоставляется трек-номер.</li>
+                    </ul>
+                    
+                    <h4>Самовывоз</h4>
+                    <p>Вы можете забрать заказ самостоятельно из нашего пункта выдачи по адресу: г. Москва, ул. Примерная, д. 15.</p>
+                    <ul class="check-list">
+                        <li><span>Срок:</span> В день заказа (после подтверждения менеджером).</li>
+                        <li><span>Стоимость:</span> Бесплатно.</li>
+                    </ul>
+
+                </section>
+
+                <section class="info-block">
+                    <h3><img src="https://icongr.am/feather/credit-card.svg?size=24&color=5D4037" alt="Оплата"> Оплата</h3>
+                    
+                    <h4>Онлайн-оплата на сайте</h4>
+                    <p>Безопасный платежный шлюз для моментальной оплаты картами VISA, MasterCard, МИР.</p>
+                    <ul class="check-list">
+                        <li><span>Безопасность:</span> Соответствует стандартам PCI DSS.</li>
+                        <li><span>Чек:</span> Электронный чек отправляется на E-mail.</li>
+                    </ul>
+                    
+                    <h4>Оплата при получении</h4>
+                    <p>Оплата наличными или банковской картой курьеру (доступно только для Москвы и МО).</p>
+                    <ul class="check-list">
+                        <li><span>Карта:</span> Курьер имеет терминал для оплаты.</li>
+                        <li><span>Наличные:</span> Пожалуйста, подготовьте сумму без сдачи, если это возможно.</li>
+                    </ul>
+
+                    <h4>Безналичный расчет для юр. лиц</h4>
+                    <p>Мы работаем с юридическими лицами по выставлению счета.</p>
+                    <ul class="check-list">
+                        <li><span>Документы:</span> Предоставляем полный комплект закрывающих документов.</li>
+                        <li><span>Связь:</span> Для получения счета свяжитесь с нашим отделом продаж.</li>
+                    </ul>
+                </section>
+                
+            </div>
+        </div>
+    </main>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" title="Закрыть">
+                <img src="https://icongr.am/feather/x.svg?size=24&color=aaaaaa" alt="Закрыть">
+            </span>
+            <h2>Ваша Корзина</h2>
+            <div id="cart-items"></div>
+            <p class="cart-total">Общая сумма: <span id="cart-total-amount">0 ₽</span></p>
+            <a href="checkout.html" class="primary-btn checkout-btn">Оформить заказ</a>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-column footer-logo-info">
+                <h3 class="logo"><img src="https://icongr.am/feather/coffee.svg?size=24&color=ffffff" alt="" class="logo-icon-footer"> Посуда & Чай</h3>
+                <p class="copyright-text">&copy; 2025 Все права защищены.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                     <li><a href="account.html">Личный кабинет</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Помощь</h4>
+                <ul>
+                    <li><a href="payment_delivery.html">Оплата и Доставка</a></li>
+                    <li><a href="agreement.html">Пользовательское соглашение</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-social">
+                <h4>Свяжитесь с нами</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" title="VK"><img src="https://icongr.am/simple/vk.svg?size=20&color=ffffff" alt="VK"></a> 
+                    <a href="#" class="social-icon" title="Telegram"><img src="https://icongr.am/simple/telegram.svg?size=20&color=ffffff" alt="Telegram"></a>
+                    <a href="#" class="social-icon" title="Instagram"><img src="https://icongr.am/simple/instagram.svg?size=20&color=ffffff" alt="Instagram"></a>
+                </div>
+                <p>+7 (495) 123-45-67</p>
+                <p>info@teashop.ru</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

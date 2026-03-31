@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог | Посуда и Чай</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo-link">
+                <h1 class="logo">
+                    <img src="img/coffee.svg" alt="Логотип" class="logo-icon">
+                    Посуда & Чай
+                </h1>
+            </a>
+            
+            <div class="search-bar">
+                <input type="text" id="search-input-main" placeholder="Поиск по товарам...">
+                <button id="search-btn-main">
+                    <img src="img/search.svg" alt="Поиск">
+                </button>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="contact.html">Контакты</a>
+                <a href="account.html">Кабинет</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="icon-btn" title="Личный кабинет">
+                    <img src="img/user.svg" alt="Личный кабинет">
+                </a>
+                <button id="cart-btn" class="icon-btn cart-btn" title="Корзина">
+                    <img src="img/shopping-cart.svg" alt="Корзина">
+                    <span id="cart-count">0</span>
+                </button>
+                <button id="menu-toggle" class="icon-btn menu-toggle" title="Меню">
+                    <img src="img/menu.svg" alt="Меню">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav id="mobile-menu" class="mobile-nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contact.html">Контакты</a>
+        <a href="account.html">Кабинет</a>
+    </nav>
+
+    <main class="container">
+        <section id="catalog" class="catalog-section">
+            <h2 class="section-title">Каталог Товаров</h2>
+            <div class="catalog-layout">
+                <aside class="sidebar">
+                    <h3>Фильтры</h3>
+                    <div id="filters">
+                        <div class="filter-group">
+                            <h4>Категория</h4>
+                            <label><input type="checkbox" name="category" value="Посуда"> Посуда</label>
+                            <label><input type="checkbox" name="category" value="Чай"> Чай</label>
+                            <label><input type="checkbox" name="category" value="Аксессуары"> Аксессуары</label>
+                        </div>
+                        <div class="filter-group">
+                            <h4>Материал</h4>
+                            <label><input type="checkbox" name="material" value="Керамика"> Керамика</label>
+                            <label><input type="checkbox" name="material" value="Фарфор"> Фарфор</label>
+                            <label><input type="checkbox" name="material" value="Стекло"> Стекло</label>
+                        </div>
+                        <button class="primary-btn" id="reset-filters-btn">Сбросить фильтры</button>
+                    </div>
+                </aside>
+
+                <div id="product-list" class="product-grid">
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" title="Закрыть">
+                <img src="https://icongr.am/feather/x.svg?size=24&color=aaaaaa" alt="Закрыть">
+            </span>
+            <h2>Ваша Корзина</h2>
+            <div id="cart-items"></div>
+            <p class="cart-total">Общая сумма: <span id="cart-total-amount">0 ₽</span></p>
+            <a href="checkout.html" class="primary-btn checkout-btn">Оформить заказ</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer-grid">
+             <div class="footer-column footer-logo-info">
+                <h3 class="logo">
+                    <img src="img/coffee.svg" alt="" class="logo-icon-footer">
+                    Посуда & Чай
+                </h3>
+                <p class="copyright-text">&copy; 2025 Все права защищены.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                     <li><a href="account.html">Личный кабинет</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Помощь</h4>
+                <ul>
+                    <li><a href="payment_delivery.html">Оплата и Доставка</a></li> 
+                    <li><a href="agreement.html">Пользовательское соглашение</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-social">
+                <h4>Свяжитесь с нами</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" title="VK">
+                        <img src="img/vk.svg" alt="VK">
+                    </a> 
+                    <a href="#" class="social-icon" title="Telegram">
+                        <img src="img/telegram.svg" alt="Telegram">
+                    </a>
+                    <a href="#" class="social-icon" title="Instagram">
+                        <img src="img/instagram.svg" alt="Instagram">
+                    </a>
+                </div>
+                <p>+7 (495) 123-45-67</p>
+                <p>info@teashop.ru</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
