@@ -1,0 +1,24 @@
+# Robots.txt для сайта Посуда & Чай
+# Последнее обновление: 2025
+
+
+User-agent: *
+Allow: /
+
+# Запретить индексацию служебных страниц
+Disallow: /checkout.html
+Disallow: /account.html
+Disallow: /cart.html
+Disallow: /admin/
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+
+# Запретить индексацию файлов
+Disallow: /*.pdf$
+Disallow: /*.doc$
+
+# Указать путь к карте сайта
+Sitemap: https://teashop.ru/sitemap.xml
+
+# Указать главное зеркало сайта
+Host: https://teashop.ru
